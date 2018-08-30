@@ -10,19 +10,19 @@
 </head>
 <body>
     <div class="wrap">
-        <form name="formNewTask">
+        <div class="section">
             <h3>Task List</h3>
-            <input name="txtNewTask" type="text" placeholder="New Task" autocomplete="off" autofocus><br>
-            <input name="btnNewTask" class="btnGreen" type="button" value="ADD TASK">
-        </form>
+            <input id="txtNewTask" type="text" placeholder="New Task" autocomplete="off" autofocus><br>
+            <input id="btnNewTask" class="btnGreen" type="button" value="ADD TASK">
+        </div>
         <hr>
-        <form name="formTaskList">
+        <div class="section">
             <h3>Tasks</h3>
-            <input name="txtFilterTasks" type="text" placeholder="Filter Tasks" autocomplete="off"><br>
+            <input id="txtFilterTasks" type="text" placeholder="Filter Tasks" autocomplete="off"><br>
             <div id="tasksContainer">
             </div>
-            <input name="btnClearTasks" type="button" value="CLEAR TASKS">
-        </form>
+            <input id="btnClearTasks" type="button" value="CLEAR TASKS">
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>

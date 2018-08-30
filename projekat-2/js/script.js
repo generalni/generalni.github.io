@@ -15,14 +15,14 @@ window.onload = function() {
             addTask();
         }
     }
-    document.formNewTask.btnNewTask.addEventListener("click", addTask);
-    document.formTaskList.txtFilterTasks.addEventListener("keyup", filterTasks);
-    document.formTaskList.btnClearTasks.addEventListener("click", clearAllTasks);
+    document.getElementById("btnNewTask").addEventListener("click", addTask);
+    document.getElementById("txtFilterTasks").addEventListener("keyup", filterTasks);
+    document.getElementById("btnClearTasks").addEventListener("click", clearAllTasks);
 }
 
 // add a single task to localStorage
 function addTask() {
-    let newTaskTextField = document.formNewTask.txtNewTask;
+    let newTaskTextField = document.getElementById("txtNewTask");
 
     if (newTaskTextField.value !== "") {
         arrayTask.push(newTaskTextField.value);
@@ -30,7 +30,7 @@ function addTask() {
         showTasks(arrayTask);
         newTaskTextField.value = "";
         newTaskTextField.focus();
-        document.formTaskList.txtFilterTasks.value = "";
+        document.getElementById("txtFilterTasks").value = "";
     } else {
         alert("Task text field cannot be blank");
     }
@@ -59,7 +59,7 @@ function showTasks(arrayToShow) {
             // add everything to list of tasks
             document.getElementById("tasksContainer").appendChild(taskContainer);
             // clear new task text box
-            document.formNewTask.txtNewTask.value = "";
+            document.getElementById("txtNewTask").value = "";
         }
     } else {
         alert("Sorry! Your browser doesn't support Web Storage, all changes will be lost when you turn off your browser.");
@@ -67,7 +67,7 @@ function showTasks(arrayToShow) {
 }
 
 function filterTasks() {
-    let txtToFilter = document.formTaskList.txtFilterTasks.value.toUpperCase();
+    let txtToFilter = document.getElementById("txtFilterTasks").value.toUpperCase();
     const filteredArray = arrayTask.filter(word => word.toUpperCase().indexOf(txtToFilter) > -1);
     showTasks(filteredArray);
 }
@@ -83,7 +83,7 @@ function clearAllTasks() {
         // clear task container
         taskContainer.innerHTML = "";
         // clear filter text box
-        document.formTaskList.txtFilterTasks.value = "";
+        document.getElementById("txtFilterTasks").value = "";
     }
 }
 
@@ -103,7 +103,7 @@ function deleteTask(event) {
         // remove selected element from DOM
         objParent.remove();
         // if there is something in filter text box, show only filtered results, else, show the whole list of tasks
-        if (document.formTaskList.txtFilterTasks.value != "") {
+        if (document.getElementById("txtFilterTasks").value != "") {
             filterTasks();
         } else {
             showTasks(arrayTask);

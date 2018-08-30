@@ -8,8 +8,8 @@ body {
     display: flex;
     justify-content: center;
 }
-div.wrap {
-    width: 100%;
+.wrap {
+    width: 400px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -17,7 +17,7 @@ div.wrap {
     border: 2px solid lightgray;
     border-radius: .2rem;
 }
-form {
+div.section {
     padding: 1rem;
 }
 h3 {
@@ -84,12 +84,4 @@ span {
     overflow: auto;
     overflow-wrap: break-word;
     word-break: break-word;
-}
-span.taskId {
-    /*display: none;*/
-}
-@media only screen and (max-width: 1920px) {
-    div.wrap {
-        width: 768px;
-    }
 }
