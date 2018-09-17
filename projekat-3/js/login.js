@@ -85,7 +85,7 @@ function signUp() {
     }
 
     // password must contain one uppercase letter, one number and one special character
-    let passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/g;
+    let passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/g;
     if(!passwordPattern.test(user.password)) {
         $("#statusBox").html("Password must contain at least 8 characters, one uppercase letter, one number and one special character");
         validationError = true;
