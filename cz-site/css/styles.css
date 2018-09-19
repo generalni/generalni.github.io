@@ -59,25 +59,27 @@ header div p {
 	color: #e4ba72;
 }
 header div.container {
-	display: inline-block;
 	float: right;
-  height: 7rem;
-  width: 20rem;
-  overflow: hidden;
-  background-image: url("../img/marakana_zastava.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+	height: 7rem;
+	width: 20rem;
+	overflow: hidden;
+	background-image: url("../img/marakana_zastava.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
 }
 header .mask {
-  width: 0;
-  height: 0;
-  border-top: 7rem solid #c81a21;
-  border-right: 7rem solid transparent;
+	width: 0;
+	height: 0;
+	border-top: 7rem solid #c81a21;
+	border-right: 7rem solid transparent;
 }
 header .big {
 	font-size: 2rem;
 	color: white;
+}
+#menuButton {
+	display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -92,9 +94,9 @@ header .big {
 @media only screen and (max-width: 600px) {
 	header {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		height: 3rem;
-		padding: .5rem;
+		padding: 1rem;
 	}
 	header img {
 		margin: 0;
@@ -102,6 +104,9 @@ header .big {
 	}
 	header div.logo > div {
 		display: none;
+	}
+	#menuButton {
+		display: block;
 	}
 }
 
@@ -124,7 +129,6 @@ nav ul {
 	list-style-type: none;
 }
 nav li {
-	display: inline-block;
 	float: left;
 }
 nav a {
@@ -187,6 +191,7 @@ nav .subMenu:hover .options {
 
 @media only screen and (max-width: 600px) {
 	nav {
+		display: none;
 		top: 3rem;
 		text-align: center;
 	}
@@ -265,7 +270,7 @@ section img:hover {
 @media only screen and (max-width: 600px) {
 	section {
 		padding: 0 1rem 1rem 1rem;
-		margin: 10rem 0 0 0;
+		margin: 2rem 0 0 0;
 	}
 	section .image-content-left {
 		float: none;
