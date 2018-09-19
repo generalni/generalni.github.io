@@ -208,8 +208,8 @@ nav .subMenu:hover .options {
 		width: 100%;
 	}
 	nav .options {
-		/* height: 7rem; */
-		overflow-y: auto;
+		height: 7rem;
+		overflow-y: scroll;
 	}
 }
 
