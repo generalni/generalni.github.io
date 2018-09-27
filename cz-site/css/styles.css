@@ -48,7 +48,7 @@ header .logo {
 	display: flex;
 	align-items: center;
 }
-header img {
+header .logo img {
 	height: auto;
 	width: 5rem;
 	margin-right: 1rem;
@@ -93,20 +93,23 @@ header .big {
 
 @media only screen and (max-width: 600px) {
 	header {
-		display: flex;
-		justify-content: space-between;
-		height: 3rem;
+		height: 4rem;
 		padding: 1rem;
 	}
-	header img {
+	header .logo img {
 		margin: 0;
-		width: 2rem;
+		width: 3rem;
 	}
 	header div.logo > div {
 		display: none;
 	}
-	#menuButton {
-		display: block;
+	header #menuButton {
+		display: flex;
+		align-items: center;
+	}
+	header #menuButton img {
+		margin: 0;
+		width: 2rem;
 	}
 }
 
@@ -192,7 +195,7 @@ nav .subMenu:hover .options {
 @media only screen and (max-width: 600px) {
 	nav {
 		display: none;
-		top: 3rem;
+		top: 4rem;
 		text-align: center;
 	}
 	nav ul {
@@ -203,6 +206,10 @@ nav .subMenu:hover .options {
 	nav li {
 		float: none;
 		text-align: center;
+		border-bottom: 1px solid #c81a21;
+	}
+	nav .subMenu li {
+		border-bottom: none;
 	}
 	nav a {
 		width: 100%;
@@ -270,7 +277,7 @@ section img:hover {
 @media only screen and (max-width: 600px) {
 	section {
 		padding: 0 1rem 1rem 1rem;
-		margin: 2rem 0 0 0;
+		margin: 3rem 0 0 0;
 	}
 	section .image-content-left {
 		float: none;
